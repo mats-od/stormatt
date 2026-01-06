@@ -1,17 +1,45 @@
+/* app/style.css */
+
 body {
     font-family: sans-serif;
+    /* Ein anderer Hintergrund, um die Transparenz zu sehen */
+    background-color: #d3d3d3; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+#ascii-container {
+    width: 90vw; 
+    max-width: 900px;
+    aspect-ratio: 16 / 9; 
+    margin-top: -10vh;
+    font-family: monospace; 
+}
+
+/* 
+  NEU: Styling für das vom AsciiEffect erzeugte <pre>-Element 
+*/
+#ascii-container pre {
+    /* Sorgen dafür, dass das Element den Container komplett ausfüllt */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    /* Zentriert die ASCII-Zeichen horizontal */
+    text-align: center; 
+
+    /* Zentriert die ASCII-Zeichen vertikal (moderne Flexbox-Methode) */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f2f5;
-}
 
-.container {
-    text-align: center;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* NEU: Schriftgröße für höhere Auflösung verringern */
+    font-size: 4px;
+    /* Passen Sie die Zeilenhöhe an, um Lücken zu vermeiden */
+    line-height: 4px; 
 }
